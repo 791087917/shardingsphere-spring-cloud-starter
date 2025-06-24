@@ -6,13 +6,13 @@ shardingsphere-jdbc + dynamic + seata + zookeeper实现本地事务与分布式�
 - 官方说明
 ![img.png](img/2.png)
 # 原理分析
-- 组件架构图
-![1.png](img/1.png)
-- 动态数据源结构
-![1.png](img/3.png)
 - 事务提交流程
-![1.png](img/4.png)
-原则：跨数据源事务互相隔离，因为不同的数据源创建的Connection不同，事务无法传播。
+  - 跨数据源事务互相隔离，因为不同的数据源创建的Connection不同，无法传播。
+  - ![1.png](img/4.png)
+- 组件架构图
+  - ![1.png](img/1.png)
+- 动态数据源结构
+  - ![1.png](img/3.png)
 - 核心源码说明
   - 使用zk内配置的分表规则创建分表本地数据源、SEATA数据源
   - ![1.png](img/5.png)

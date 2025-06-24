@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.peace.sharding.ShardingAutoConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+    com.peace.sharding.ShardingContextInitializer

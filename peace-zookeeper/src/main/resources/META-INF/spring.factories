@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.peace.zookeeper.ZooKeeperAutoConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+    com.peace.zookeeper.auth.DefaultAuthContextInitializer

@@ -12,8 +12,6 @@ shardingsphere-jdbc + dynamic + seata + zookeeper实现本地事务与分布式�
     - 跨数据源需在同一事务
     - 跨服务需在同一事务
   - ![1.png](img/4.png)
-- 组件架构图
-  - ![1.png](img/1.png)
 - 动态数据源结构
   - ![1.png](img/3.png)
 - 核心源码说明
@@ -57,3 +55,5 @@ public void updateByGoodsNo(String title) {
     throw new RuntimeException("TTTT");
 }
 ~~~
+# ShardingSphere架构图
+  - ![1.png](img/1.png)

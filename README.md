@@ -15,6 +15,8 @@ shardingsphere-jdbc + dynamic + seata + zookeeper实现本地事务与分布式�
 - 动态数据源结构
   - ![1.png](img/3.png)
 - 核心源码说明
+  - 重要：扩展SPI初始化SharingSphere数据源支持本地事务跟分布式事务
+  - ![img.png](img/8.png)
   - 使用zk内配置的分表规则创建分表本地数据源、SEATA数据源
   - ![1.png](img/5.png)
   - 把分表数据源交给mybatis动态数据源管理

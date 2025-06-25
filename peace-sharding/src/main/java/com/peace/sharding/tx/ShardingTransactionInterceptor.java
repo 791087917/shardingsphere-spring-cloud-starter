@@ -35,7 +35,7 @@ public class ShardingTransactionInterceptor implements Interceptor {
         String ds = DynamicDataSourceContextHolder.peek();
         // 1.单表数据源不拦截
         // 2.seata数据源不拦截
-        if (!dataSourceProperties.getDatabase().equals(ds)) {
+        if (!dataSourceProperties.getDatasource().equals(ds)) {
             return invocation.proceed();
         }
         // 拦截修改(insert/update/delete)

@@ -42,7 +42,7 @@ spring:
       strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
       sharding:
         # 分表数据源逻辑库名称，与mybatis动态数据源名称一致
-        database: logic_xxx
+        datasource: logic_xxx
 ~~~
 - 3.代码使用
 ~~~

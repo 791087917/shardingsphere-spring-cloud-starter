@@ -11,6 +11,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "spring.datasource.dynamic.sharding")
 public class DataSourceProperties {
 
-    private String database;
+    private String datasource;
 
 }

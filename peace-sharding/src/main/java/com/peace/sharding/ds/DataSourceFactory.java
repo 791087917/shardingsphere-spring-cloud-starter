@@ -22,14 +22,14 @@ import java.util.Properties;
 public class DataSourceFactory {
 
     public static Map<String, DataSource> create(ZooKeeperProperties zkProps, DataSourceProperties dsProps) {
-        Assert.notNull(dsProps.getDatabase(), "Sharding datasource is null.");
+        Assert.notNull(dsProps.getDatasource(), "Sharding datasource is null.");
 
-        String localDS = dsProps.getDatabase();
+        String localDS = dsProps.getDatasource();
         String seataDS = createSeataDS(localDS);
         // 默认创建LOCAL + SEATA 两种事务的DataSource
         HashMap<String, DataSource> map = new HashMap<>();
-        map.put(localDS, create(zkProps, dsProps.getDatabase(), true));
-        map.put(seataDS, create(zkProps, dsProps.getDatabase(), false));
+        map.put(localDS, create(zkProps, dsProps.getDatasource(), true));
+        map.put(seataDS, create(zkProps, dsProps.getDatasource(), false));
         log.info("Sharding datasource init success : {}", localDS);
         return map;
     }

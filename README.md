@@ -55,5 +55,19 @@ public void updateByGoodsNo(String title) {
     throw new RuntimeException("TTTT");
 }
 ~~~
+- 4.附加说明
+  - 参考DDD思想抽出wrapper层，切换数据源处理分表业务、事务。
+  ~~~
+    - com.example
+    ├── service           // 业务服务层
+    ├── dao               // DAO服务层
+    │   ├── wrapper       // 分表包装层
+    │   │   ├── UserWrapper
+    │   │   └── OrderWrapper
+    │   ├── mapper        // 数据访问层
+    │   │   ├── UserMapper
+    │   │   ├── OrderMapper
+    └── └── └── ...
+  ~~~
 # ShardingSphere架构图
   - ![1.png](img/1.png)

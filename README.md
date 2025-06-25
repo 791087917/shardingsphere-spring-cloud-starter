@@ -8,6 +8,9 @@ shardingsphere-jdbc + dynamic + seata + zookeeper实现本地事务与分布式�
 # 原理分析
 - 事务提交流程
   - 跨数据源事务互相隔离，因为不同的数据源创建的Connection不同，无法传播。
+  - 分布式事务@GlobalTransaction注解使用场景
+    - 跨数据源需在同一事务
+    - 跨服务需在同一事务
   - ![1.png](img/4.png)
 - 组件架构图
   - ![1.png](img/1.png)
